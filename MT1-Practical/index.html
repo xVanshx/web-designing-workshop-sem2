@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Even Numbers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Sum of Even Numbers from 1 to your input</h1>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="calculateSum()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculateSum() {
+            const input = document.getElementById('numberInput').value;
+            const number = parseInt(input);
+            let sum = 0;
+
+            for (let i = 1; i <= number; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+
+            document.getElementById('result').textContent = `The sum of even numbers from 1 to ${number} is: ${sum}`;
+        }
+        </script>
+</body>
+</html>
